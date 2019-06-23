@@ -1,21 +1,21 @@
 import { shallowMount } from '@vue/test-utils'
-import Vue from 'vue'
+// import Vue from 'vue'
 import HelloWorld from '@/pages/HelloWorld.vue'
-import Text from '@/components/text'
+import TextShow from '@/components/TextShow.vue'
 
-function getRenderedText(Component, propsData) {
-  const Constructor = Vue.extend(Component);
-  const vm = new Constructor({ propsData: propsData }).$mount();
-  return vm.$el.textContent;
-}
+// function getRenderedText(Component, propsData) {
+//   const Constructor = Vue.extend(Component);
+//   const vm = new Constructor({ propsData: propsData }).$mount();
+//   return vm.$el.textContent;
+// }
 
-// describe('Text', () => {
-//   it('Text component with different props', () => {
-//     expect(getRenderedText(Text,{
+// describe('TextShow', () => {
+//   it('TextShow component with different props', () => {
+//     expect(getRenderedText(TextShow,{
 //       message: 'Hello'
 //     })).toBe('Hello')
 
-//     expect(getRenderedText(Text,{
+//     expect(getRenderedText(TextShow,{
 //       message: '123'
 //     })).toBe('123')
 //   })
@@ -24,10 +24,10 @@ function getRenderedText(Component, propsData) {
 /**
  * 组件测试
  */
-describe('Text.vue', () => {
-  it('Text component with different props', () => {
+describe('TextShow.vue', () => {
+  it('TextShow component with different props', () => {
     const message = 'new message'
-    const wrapper = shallowMount(Text, {
+    const wrapper = shallowMount(TextShow, {
       propsData: { message }
     })
     expect(wrapper.text()).toMatch(message)
